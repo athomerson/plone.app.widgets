@@ -113,7 +113,7 @@ class BaseWidget(object):
 
 
 class DivWidget(BaseWidget):
-    """Widget with `div` element."""
+    """Widget with `div` element. """
 
     def __init__(self, pattern, pattern_options={}):
         """

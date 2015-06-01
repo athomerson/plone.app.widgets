@@ -293,18 +293,18 @@ class DivWidgetTests(unittest.TestCase):
     def test_defaults(self):
         from plone.app.widgets.base import DivWidget
 
-        widget = DivWidget('upload')
+        widget = DivWidget('div')
         self.assertEqual(
             widget.render(),
-            '<div class="pat-upload"/>')
+            '<div class="pat-div"/>')
 
-        self.assertEqual(widget.klass, 'pat-upload')
+        self.assertEqual(widget.klass, 'pat-div')
 
     def test_setting_patterns_options(self):
         from plone.app.widgets.base import DivWidget
 
         widget = DivWidget(
-            'upload',
+            'div',
             pattern_options={
                 'option1': 'value1',
                 'option2': 'value2',
@@ -312,7 +312,7 @@ class DivWidgetTests(unittest.TestCase):
 
         self.assertEqual(
             widget.render(),
-            '<div class="pat-upload" '
-            'data-pat-upload="{'
+            '<div class="pat-div" '
+            'data-pat-div="{'
             '&quot;option2&quot;: &quot;value2&quot;, '
             '&quot;option1&quot;: &quot;value1&quot;}"/>')
